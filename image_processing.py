@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 import cv2
 import numpy as np
 import streamlit as st
@@ -26,7 +25,7 @@ uploaded_file = st.file_uploader('select your image')
 filter_type = st.selectbox('choose filter type:', ['Blur', 'Gaussian Blur', 'Median Blur', 'Bilateral Filter'])
 
 # select kernel size
-kernel_size = st.slider('choose kernel size:', 1, 15, 2)
+kernel_size = st.slider('choose kernel size:', 3, 15, 2)
 
 if uploaded_file is not None:
   img = np.array(bytearray(uploaded_file.read()))
